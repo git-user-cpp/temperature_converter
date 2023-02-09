@@ -18,6 +18,50 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+use std::io;
+
 fn main() {
-    println!("Hello, world!");
+
+    println!("Choose an option:\n
+             1] Convert C to F\n
+             2] Convert F to C");
+
+    let mut choise = String::new();
+
+    io::stdin()
+        .read_line(&mut choise)
+        .expect("Failed to read your choise");
+
+    let choise: u8 = choise.trim().parse().expect("Please type your choise");
+
+    //branch for C
+    if choise == 1 {
+        println!("Please insert your temperature in C:");
+
+        //variable for input
+        let mut input_var = String::new();
+    
+        io::stdin()
+            .read_line(&mut input_var)
+            .expect("Failed to read the line");
+
+        let input_var: f64 = input_var.trim().parse().expect("Please type your temperature");
+
+        println!("{input_var}");
+    }
+    //branch for F
+    else if choise == 2 {
+        println!("Please insert your temperature in F:");
+
+        //variable for input
+        let mut input_var = String::new();
+
+        io::stdin()
+            .read_line(&mut input_var)
+            .expect("Failed to read the line");
+
+        let input_var: f64 = input_var.trim().parse().expect("Please type your temperature");
+
+        println!("{input_var}");
+    }
 }
