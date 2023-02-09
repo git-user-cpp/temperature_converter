@@ -1,4 +1,4 @@
-# temperature_converter
+# Temperature converter
 temperature converter
 
 ## ⚠️ LICENSE ⚠️
