@@ -22,9 +22,7 @@ use std::io;
 
 fn main() {
 
-    println!("Choose an option:\n
-             1] Convert C to F\n
-             2] Convert F to C");
+    println!("________________________\nChoose an option:\n\n1] Convert C to F\n2] Convert F to C\n________________________");
 
     let mut choise = String::new();
 
@@ -47,7 +45,9 @@ fn main() {
 
         let input_var: f64 = input_var.trim().parse().expect("Please type your temperature");
 
-        println!("{input_var}");
+        let result = (input_var * (9.0 / 5.0)) + 32.0;
+
+        println!("Temperature in F: {result}");
     }
     //branch for F
     else if choise == 2 {
@@ -62,6 +62,8 @@ fn main() {
 
         let input_var: f64 = input_var.trim().parse().expect("Please type your temperature");
 
-        println!("{input_var}");
+        let result = (input_var - 32.0) * (5.0 / 9.0);
+
+        println!("Temperature in C: {result}");
     }
 }
