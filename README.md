@@ -1,5 +1,5 @@
-# Temperature converter
-temperature converter
+# Temperature converter v0.1.0
+:ski: Simple temperature converter :ski:
 
 ## ⚠️ LICENSE ⚠️
 MIT License
